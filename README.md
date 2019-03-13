@@ -15,11 +15,11 @@ npm install
 
 ## Usage
 
-Copy/Rename the `.env_example` to `.env` and fill out the values:
+Copy/Rename the `config_example.js` to `config.js` and fill out the values:
 
 ```
-token=
-prefix=
+TOKEN = 'BOT TOKEN';
+PREFIX = 'BOT PREFIX';
 ```
 
 ## Features
