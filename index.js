@@ -1,7 +1,7 @@
-require('dotenv').config();
 const Discord = require('discord.js');
 const { Client, RichEmbed, Attachment } = Discord;
 const client = new Client({ disableEveryone: true });
+const { TOKEN, PREFIX } = require('./config.js');
 const Enmap = require('enmap');
 const bldb = new Enmap({ name: 'bldb' });
 
@@ -15,7 +15,7 @@ client.on('ready', () => {
 client.on('message', async message => {
 
 	const key = `${message.guild.id-message.author.id}`;
-	const prefix = process.env.prefix;
+	const prefix = PREFIX;
 	const args = message.content.slice(prefix.length).trim().split(/\s+/g);
 	const command = args.shift().toLowerCase();
 	if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -277,4 +277,4 @@ client.on('message', async message => {
 
 });
 
-client.login(process.env.token);
+client.login(TOKEN);
