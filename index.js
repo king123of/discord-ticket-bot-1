@@ -179,7 +179,7 @@ client.on('message', async message => {
 
 							const embed = new RichEmbed()
 
-						  	.setColor('RANDOM')
+						  	        .setColor('RANDOM')
 								.setTitle('Your ticket has been closed!')
 								.addField('Closed By:', message.author.tag)
 								.addField('Reason:', reason)
